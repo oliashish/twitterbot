@@ -6,6 +6,7 @@ function retweet() {
      let params = {
           q: `#javascript`,
      };
+
      T.get("search/tweets", params, (err, data, res) => {
           let tweets = data.statuses;
           if (!err) {
@@ -22,7 +23,7 @@ function retweet() {
                               }
                               if (err) {
                                    console.log(
-                                        "something went wronge while aborting..." +
+                                        "something went wronge while aborting " +
                                              err
                                    );
                               }
